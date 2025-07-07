@@ -8,9 +8,9 @@
 .markdown-preview-view h6,
 .cm-header,
 .cm-content {
-  font-family: "Andalus", "Calibri", "Amiri", "Noto Naskh Arabic", serif;
+  font-family: "Andalus", "Calibri", "Helvetica", "Inter", "Amiri", "Noto Naskh Arabic", serif;
 }
 
 body {
-  font-family: "Andalus", "Calibri", serif;
+  font-family: "Andalus", "Calibri", "Helvetica", "Inter", serif;
 }
