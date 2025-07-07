@@ -1,0 +1,16 @@
+/* Apply Andalus (or fallback) to headers in reading and editing mode */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.cm-header,
+.cm-content {
+  font-family: "Andalus", "Amiri", "Noto Naskh Arabic", serif;
+}
+
+body {
+  font-family: "Andalus", serif;
+}
