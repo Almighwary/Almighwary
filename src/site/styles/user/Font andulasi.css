@@ -1,16 +1,30 @@
-/* Apply Andalus (or fallback) to headers in reading and editing mode */
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
 
+/* === GLOBAL DEFAULT FONT (Inter) === */
+body,
+.markdown-preview-view,
+.markdown-source-view,
+.cm-s-obsidian,
+.cm-content,
+.cm-line {
+  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+}
+
+/* === HEADERS USE HELVETICA === */
 .markdown-preview-view h1,
 .markdown-preview-view h2,
 .markdown-preview-view h3,
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6,
-.cm-header,
-.cm-content {
-  font-family: "Andalus", "Calibri", "Helvetica", "Inter", "Amiri", "Noto Naskh Arabic", serif;
+.cm-header {
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
-body {
-  font-family: "Andalus", "Calibri", "Helvetica", "Inter", serif;
+/* === CODE BLOCKS USE ROBOTO MONO === */
+.markdown-preview-view pre,
+.markdown-preview-view code,
+.cm-inline-code,
+.cm-s-obsidian .cm-code {
+  font-family: "Roboto Mono", monospace;
 }
