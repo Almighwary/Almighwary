@@ -7,7 +7,7 @@ body,
 .cm-s-obsidian,
 .cm-content,
 .cm-line {
-  font-family: "Inter", "Helvetica", "Arial", sans-serif;
+  font-family: "andalus", "Inter", "Helvetica", "Arial", sans-serif;
 }
 
 /* === HEADERS USE HELVETICA === */
@@ -18,7 +18,7 @@ body,
 .markdown-preview-view h5,
 .markdown-preview-view h6,
 .cm-header {
-  font-family: "Helvetica", "Arial", sans-serif;
+  font-family: "andalus", "Helvetica", "Arial", sans-serif;
 }
 
 /* === CODE BLOCKS USE ROBOTO MONO === */
@@ -26,5 +26,5 @@ body,
 .markdown-preview-view code,
 .cm-inline-code,
 .cm-s-obsidian .cm-code {
-  font-family: "Roboto Mono", monospace;
+  font-family: "andalus", "Roboto Mono", monospace;
 }
