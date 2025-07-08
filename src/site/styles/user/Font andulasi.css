@@ -1,1 +1,31 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto&display=swap');
+
+/* === GLOBAL DEFAULT FONT (Inter) === */
+body,
+.markdown-preview-view,
+.markdown-source-view,
+.cm-s-obsidian,
+.cm-content,
+.cm-line {
+  font-family: "andalus", "Inter", "Helvetica", "Arial", sans-serif;
+}
+
+/* === HEADERS USE HELVETICA === */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.cm-header {
+  font-family: "andalus", "Helvetica", "Arial", sans-serif;
+}
+
+/* === CODE BLOCKS USE ROBOTO MONO === */
+.markdown-preview-view pre,
+.markdown-preview-view code,
+.cm-inline-code,
+.cm-s-obsidian .cm-code {
+  font-family: "andalus", "Roboto Mono", monospace;
+}
