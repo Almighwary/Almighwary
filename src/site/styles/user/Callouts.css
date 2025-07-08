@@ -9,13 +9,28 @@
 }
 
 .callout[data-callout="article"] {
-  background-color: orange; /* light yellow */
+  background-color: rgba(255, 165, 42, 0.5);
+  color: #ffa52a;
 }
 
 .callout[data-callout="video"] {
-  background-color: #a31a24; /* light yellow */
+  background-color: rgba(163, 38, 42, 0.5);
+  color: rgb(163, 38, 42);/* light yellow */
 }
 
 .callout[data-callout="sawtiat"] {
-  background-color: #7bee93; /* light yellow */
+  background-color: rgba(123, 238, 147, 0.5);
+  color: rgb(123, 238, 147);/* light yellow */
+}
+
+.callout[data-callout="article"] .callout-icon svg {
+  display: none; /* hide default icon */
+}
+
+.callout[data-callout="video"] .callout-icon svg {
+  display: none; /* hide default icon */
+}
+
+.callout[data-callout="sawtiat"] .callout-icon svg {
+  display: none; /* hide default icon */
 }
