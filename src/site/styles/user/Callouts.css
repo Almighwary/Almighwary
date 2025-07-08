@@ -35,19 +35,5 @@
   display: none; /* hide default icon */
 }
 
-.callout[data-callout="video"] .callout-title,
-.callout[data-callout="video"] .callout-content {
-  color: red;
-}
-
-.callout[data-callout="article"] .callout-title,
-.callout[data-callout="article"] .callout-content {
-  color: orange;
-}
-
-.callout[data-callout="sawtiat"] .callout-title,
-.callout[data-callout="sawtiat"] .callout-content {
-  color: green;
-}
 
 
