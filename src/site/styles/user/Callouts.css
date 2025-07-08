@@ -37,17 +37,17 @@
 
 .callout[data-callout="video"] .callout-title,
 .callout[data-callout="video"] .callout-content {
-  color: rgb(163, 38, 42);
+  color: red;
 }
 
 .callout[data-callout="article"] .callout-title,
 .callout[data-callout="article"] .callout-content {
-  color: rgb(255, 165, 42);
+  color: orange;
 }
 
 .callout[data-callout="sawtiat"] .callout-title,
 .callout[data-callout="sawtiat"] .callout-content {
-  color: rgb(123, 238, 147);
+  color: green;
 }
 
 
