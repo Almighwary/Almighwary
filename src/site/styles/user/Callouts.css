@@ -1,0 +1,21 @@
+.callout[data-callout="article"] .callout-icon::before {
+  content: "📑";
+}
+.callout[data-callout="sawtiat"] .callout-icon::before {
+  content: "🔊";
+}
+.callout[data-callout="video"] .callout-icon::before {
+  content: "📺";
+}
+
+.callout[data-callout="article"] {
+  background-color: orange; /* light yellow */
+}
+
+.callout[data-callout="video"] {
+  background-color: #a31a24; /* light yellow */
+}
+
+.callout[data-callout="sawtiat"] {
+  background-color: #7bee93; /* light yellow */
+}
