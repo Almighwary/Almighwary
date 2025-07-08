@@ -9,18 +9,18 @@
 }
 
 .callout[data-callout="article"] {
-  background-color: rgba(255, 165, 42, 0.5);
-  color: #ffa52a;
+  background-color: rgba(255, 165, 42, 0.3);
+ 
 }
 
 .callout[data-callout="video"] {
-  background-color: rgba(163, 38, 42, 0.5);
-  color: rgb(163, 38, 42);/* light yellow */
+  background-color: rgba(163, 38, 42, 0.3);
+* light yellow */
 }
 
 .callout[data-callout="sawtiat"] {
-  background-color: rgba(123, 238, 147, 0.5);
-  color: rgb(123, 238, 147);/* light yellow */
+  background-color: rgba(123, 238, 147, 0.3);
+ /* light yellow */
 }
 
 .callout[data-callout="article"] .callout-icon svg {
@@ -34,3 +34,20 @@
 .callout[data-callout="sawtiat"] .callout-icon svg {
   display: none; /* hide default icon */
 }
+
+.callout[data-callout="video"] .callout-title,
+.callout[data-callout="video"] .callout-content {
+  color: rgb(163, 38, 42);
+}
+
+.callout[data-callout="article"] .callout-title,
+.callout[data-callout="article"] .callout-content {
+  color: rgb(255, 165, 42);
+}
+
+.callout[data-callout="sawtiat"] .callout-title,
+.callout[data-callout="sawtiat"] .callout-content {
+  color: rgb(123, 238, 147);
+}
+
+
