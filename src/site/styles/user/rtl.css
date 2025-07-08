@@ -18,15 +18,7 @@ p, li, blockquote, table,
   direction: rtl;
   text-align: right;
 }
-.markdown-preview-view table {
+table {
   direction: rtl;
   text-align: right;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.markdown-preview-view th,
-.markdown-preview-view td {
-  border: 1px solid #ccc;
-  padding: 8px;
 }
