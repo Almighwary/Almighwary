@@ -19,7 +19,7 @@
 .markdown-preview-view h5,
 .markdown-preview-view h6,
 .cm-header {
-  font-family: "andalus", "Helvetica", "Arial", sans-serif;
+  font-family: "Helvetica", "Inter", "Arial", sans-serif;
 }
 
 /* === CODE BLOCKS USE ROBOTO MONO === */
@@ -27,5 +27,5 @@
 .markdown-preview-view code,
 .cm-inline-code,
 .cm-s-obsidian .cm-code {
-  font-family: "andalus", "Roboto Mono", monospace;
+  font-family: "Helvetica", "Inter",  "Roboto Mono", monospace;
 }
