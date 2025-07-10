@@ -18,7 +18,4 @@ p, li, blockquote, table,
   direction: rtl;
   text-align: right;
 }
-table {
-  direction: rtl;
-  text-align: right;
-}
+
