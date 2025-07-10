@@ -1,0 +1,50 @@
+.callout[data-callout="border"] {
+  border: 2px dashed orange;
+  background-color: rgba(0,0,0,0);
+  border-radius: 8px;
+}
+.callout[data-callout="border"] .callout-title .callout-icon {
+  background: none;
+  color: inherit;
+  font-size: 1.2em;
+  content: "📑"; /* fallback for older Obsidian versions */
+}
+
+.callout[data-callout="border-aqua"] {
+  border: 2px dashed #1c6cc9;
+  background-color: rgba(0,0,0,0);
+  border-radius: 8px;
+}
+
+.callout[data-callout="border-aqua"] .callout-title .callout-icon {
+  background: none;
+  color: #1c6cc9;
+  font-size: 1.2em;
+  content: "📑"; /* fallback for older Obsidian versions */
+}
+
+.callout[data-callout="border-crimson"] {
+  border: 2px dashed crimson;
+  background-color: rgba(0,0,0,0);
+  border-radius: 8px;
+}
+
+.callout[data-callout="border-crimson"] .callout-title .callout-icon {
+  background: none;
+  color: crimson;
+  font-size: 1.2em;
+  content: "📑"; /* fallback for older Obsidian versions */
+}
+
+.callout[data-callout="border-green"] {
+  border: 2px dashed forestgreen;
+  background-color: rgba(0,0,0,0);
+  border-radius: 8px;
+}
+
+.callout[data-callout="border-green"] .callout-title .callout-icon {
+  background: none;
+  color: forestgreen;
+  font-size: 1.2em;
+  content: "📑"; /* fallback for older Obsidian versions */
+}
