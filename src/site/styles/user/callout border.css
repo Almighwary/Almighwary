@@ -69,13 +69,13 @@
 }
 
 .callout[data-callout="border"] .callout-title,{
-  color: crimson;
+  color: orange;
 }
 .callout[data-callout="border-green"] .callout-title,{
-  color: crimson;
+  color: forestgreen;
 }
 .callout[data-callout="border-aqua"] .callout-title,{
-  color: crimson;
+  color: aqua;
 }
 
 
