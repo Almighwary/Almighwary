@@ -48,3 +48,14 @@
   font-size: 1.2em;
   content: "📑"; /* fallback for older Obsidian versions */
 }
+
+.callout[data-callout="border-green"] .callout-icon::before {
+  content: "📑";}
+
+.callout[data-callout="border"] .callout-icon::before {
+  content: "📑";}
+
+.callout[data-callout="border-crimson"] .callout-icon::before {
+  content: "📑";}
+.callout[data-callout="border-aqua"] .callout-icon::before {
+  content: "📑";}
