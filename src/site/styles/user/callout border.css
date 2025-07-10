@@ -49,13 +49,34 @@
   content: "📑"; /* fallback for older Obsidian versions */
 }
 
-.callout[data-callout="border-green"] .callout-icon::before {
-  content: "📑";}
+.callout[data-callout="border"] .callout-icon svg {
+  display: none;
+}
+.callout[data-callout="border-crimson"] .callout-icon svg {
+  display: none;
+}
 
-.callout[data-callout="border"] .callout-icon::before {
-  content: "📑";}
+.callout[data-callout="border-aqua"] .callout-icon svg {
+  display: none;
+}
 
-.callout[data-callout="border-crimson"] .callout-icon::before {
-  content: "📑";}
-.callout[data-callout="border-aqua"] .callout-icon::before {
-  content: "📑";}
+.callout[data-callout="border-green"] .callout-icon svg {
+  display: none;
+}
+
+.callout[data-callout="border-crimson"] .callout-title,{
+  color: crimson;
+}
+
+.callout[data-callout="border"] .callout-title,{
+  color: crimson;
+}
+.callout[data-callout="border-green"] .callout-title,{
+  color: crimson;
+}
+.callout[data-callout="border-aqua"] .callout-title,{
+  color: crimson;
+}
+
+
+
