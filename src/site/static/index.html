@@ -1,0 +1,1889 @@
+<head><style>* { box-sizing: border-box; }
+body {
+            --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Solid";
+--fa-font-regular: normal 400 1em/1 "Font Awesome 6 Regular";
+--fa-font-light: normal 300 1em/1 "Font Awesome 6 Light";
+--fa-font-thin: normal 100 1em/1 "Font Awesome 6 Thin";
+--fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+--fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+--fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+--xfa-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+--xfa-focus-outline: auto;
+--viewer-container-height: 0;
+--pdf-viewer-padding-bottom: 0;
+--page-margin: 1px auto -8px;
+--page-border: 9px solid transparent;
+--spread-horizontal-wrapped-margin--l-r: -3.5px;
+--loading-icon-delay: 400ms;
+--anim-duration-none: 0;
+--anim-duration-superfast: 70ms;
+--anim-duration-fast: 140ms;
+--anim-duration-moderate: 300ms;
+--anim-duration-slow: 560ms;
+--anim-motion-smooth: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+--anim-motion-delay: cubic-bezier(0.65, 0.05, 0.36, 1);
+--anim-motion-jumpy: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+--anim-motion-swing: cubic-bezier(0, 0.55, 0.45, 1);
+--blockquote-border-thickness: 1px;
+--blockquote-border-color: hsl( 0, 0%, calc(15% + 12%) );
+--blockquote-font-style: normal;
+--blockquote-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--blockquote-background-color: transparent;
+--bold-modifier: 200;
+--bold-weight: calc(400 + 200);
+--border-width: 1px;
+--button-radius: 5px;
+--callout-border-width: 0px;
+--callout-border-opacity: 0.25;
+--callout-padding: 12px 12px 12px 24px;
+--callout-radius: 4px;
+--callout-blend-mode: lighten;
+--callout-title-padding: 0;
+--callout-title-weight: calc(400 + 200);
+--callout-content-padding: 0;
+--callout-content-background: transparent;
+--callout-bug: 208,66,85;
+--callout-default: 108,153,187;
+--callout-error: 208,66,85;
+--callout-example: 158,134,200;
+--callout-fail: 208,66,85;
+--callout-important: 115,187,178;
+--callout-info: 108,153,187;
+--callout-question: 213,118,63;
+--callout-success: 168,195,115;
+--callout-summary: 115,187,178;
+--callout-tip: 115,187,178;
+--callout-todo: 108,153,187;
+--callout-warning: 213,118,63;
+--callout-quote: 158, 158, 158;
+--canvas-background: hsl( 0, 0%, 15% );
+--canvas-card-label-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--canvas-color-1: 208,66,85;
+--canvas-color-2: 213,118,63;
+--canvas-color-3: 229,181,103;
+--canvas-color-4: 168,195,115;
+--canvas-color-5: 115,187,178;
+--canvas-color-6: 158,134,200;
+--canvas-dot-pattern: hsl( 0, 0%, calc(15% + 12%) );
+--caret-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--checkbox-radius: 50%;
+--checkbox-size: 24px;
+--checkbox-marker-color: hsl( 0, 0%, 15% );
+--checkbox-color: hsl( 35, 100%, calc(50% - 5%) );
+--checkbox-color-hover: hsl( 35, 100%, 50% );
+--checkbox-border-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--checkbox-border-color-hover: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--checkbox-margin-inline-start: 0.85em;
+--checklist-done-decoration: none;
+--checklist-done-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--code-white-space: pre-wrap;
+--code-border-width: 0px;
+--code-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--code-radius: 4px;
+--code-size: 0.875em;
+--code-background: hsl( 0, 0%, calc(15% - 2%) );
+--code-normal: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--code-comment: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--code-function: #e5b567;
+--code-important: #d5763f;
+--code-keyword: #b05279;
+--code-operator: #d04255;
+--code-property: #73bbb2;
+--code-punctuation: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--code-string: #a8c373;
+--code-tag: #d04255;
+--code-value: #9e86c8;
+--collapse-icon-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--collapse-icon-color-collapsed: hsl( 35, 100%, 50% );
+--cursor: default;
+--cursor-link: pointer;
+--dialog-width: 560px;
+--dialog-max-width: 80vw;
+--dialog-max-height: 85vh;
+--divider-color: hsl( 0, 0%, calc(15% + 6%) );
+--divider-color-hover: hsl( 35, 100%, calc(50% - 5%) );
+--divider-width: 1px;
+--divider-width-hover: 3px;
+--divider-vertical-height: 100%;
+--drag-ghost-background: rgba(0, 0, 0, 0.85);
+--drag-ghost-text-color: #fff;
+--dropdown-background: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--dropdown-background-blend-mode: hard-light;
+--dropdown-background-hover: hsl( 0, 0%, calc(15% + 6%) );
+--dropdown-background-position: right 0.5em top 50%, 0 0;
+--dropdown-background-size: 1em auto, 100%;
+--dropdown-padding: 0 1.9em 0 0.8em;
+--embed-max-height: none;
+--embed-canvas-max-height: 400px;
+--embed-border-start: 2px solid hsl( 35, 100%, calc(50% - 5%) );
+--embed-border-end: none;
+--embed-border-top: none;
+--embed-border-bottom: none;
+--embed-padding: 0 0 0 24px;
+--embed-block-shadow-hover: none;
+--file-line-width: 700px;
+--file-folding-offset: 24px;
+--file-margins: 8px 48px;
+--file-header-font: Calibri, '??', '??', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--file-header-font-size: 13px;
+--file-header-font-weight: 400;
+--file-header-border: 1px solid transparent;
+--file-header-justify: center;
+--font-smallest: 0.8em;
+--font-smaller: 0.875em;
+--font-small: 0.933em;
+--font-ui-smaller: 11px;
+--font-ui-small: 13px;
+--font-ui-medium: 15px;
+--font-ui-large: 20px;
+--font-weight: 400;
+--font-thin: 100;
+--font-extralight: 200;
+--font-light: 300;
+--font-normal: 400;
+--font-medium: 500;
+--font-semibold: 600;
+--font-bold: 700;
+--font-extrabold: 800;
+--font-black: 900;
+--footnote-size: 0.875em;
+--graph-controls-width: 240px;
+--graph-text: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--graph-line: #3f3f3f;
+--graph-node: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--graph-node-unresolved: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--graph-node-focused: hsl( 35, 100%, 50% );
+--graph-node-tag: #a8c373;
+--graph-node-attachment: #e5b567;
+--heading-formatting: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--heading-spacing: 2em;
+--h1-color: #d04255;
+--h2-color: #d5763f;
+--h3-color: #e5b567;
+--h4-color: #a8c373;
+--h5-color: #6c99bb;
+--h6-color: #9e86c8;
+--h1-line-height: 1.2;
+--h2-line-height: 1.2;
+--h3-line-height: 1.3;
+--h4-line-height: 1.4;
+--h5-line-height: 1.5;
+--h6-line-height: 1.5;
+--h1-size: 1.125em;
+--h2-size: 1.05em;
+--h3-size: 1em;
+--h4-size: 0.90em;
+--h5-size: 0.85em;
+--h6-size: 0.85em;
+--h1-style: normal;
+--h2-style: normal;
+--h3-style: normal;
+--h4-style: normal;
+--h5-style: normal;
+--h6-style: normal;
+--h1-variant: normal;
+--h2-variant: normal;
+--h3-variant: normal;
+--h4-variant: normal;
+--h5-variant: small-caps;
+--h6-variant: small-caps;
+--h1-weight: 600;
+--h2-weight: 600;
+--h3-weight: 500;
+--h4-weight: 500;
+--h5-weight: 500;
+--h6-weight: 400;
+--header-height: 40px;
+--hr-color: hsl( 0, 0%, calc(15% + 6%) );
+--hr-thickness: 2px;
+--icon-size: 18px;
+--icon-stroke: 1.75px;
+--icon-xs: 14px;
+--icon-s: 16px;
+--icon-m: 18px;
+--icon-l: 18px;
+--icon-xl: 32px;
+--icon-xs-stroke-width: 2px;
+--icon-s-stroke-width: 2px;
+--icon-m-stroke-width: 1.75px;
+--icon-l-stroke-width: 1.75px;
+--icon-xl-stroke-width: 1.25px;
+--icon-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--icon-color-hover: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--icon-color-active: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--icon-color-focused: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--icon-opacity: 0.85;
+--icon-opacity-hover: 1;
+--icon-opacity-active: 1;
+--clickable-icon-radius: 4px;
+--indent-size: 4;
+--indent-unit: 0.5625em;
+--indentation-guide-width: 1px;
+--indentation-guide-width-active: 1px;
+--indentation-guide-color: rgba(255, 255, 255, 0.12);
+--indentation-guide-color-active: rgba(255, 255, 255, 0.3);
+--indentation-guide-editing-indent: 0.85em;
+--indentation-guide-reading-indent: -0.85em;
+--indentation-guide-source-indent: 0.25em;
+--inline-title-color: #d04255;
+--inline-title-line-height: 1.2;
+--inline-title-size: 1.125em;
+--inline-title-style: normal;
+--inline-title-variant: normal;
+--inline-title-weight: 600;
+--inline-title-margin-bottom: 1rem;
+--input-height: 32px;
+--input-radius: 5px;
+--input-font-weight: 400;
+--input-border-width: 1px;
+--layer-cover: 5;
+--layer-sidedock: 10;
+--layer-status-bar: 15;
+--layer-popover: 30;
+--layer-slides: 45;
+--layer-modal: 50;
+--layer-notice: 60;
+--layer-menu: 65;
+--layer-tooltip: 70;
+--layer-dragged-item: 80;
+--line-height-normal: 1.5;
+--line-height-tight: 1.3;
+--link-color: hsl( 35, 100%, 50% );
+--link-color-hover: hsl( 35, 100%, calc(50% + 8%) );
+--link-decoration: underline;
+--link-decoration-hover: underline;
+--link-decoration-thickness: auto;
+--link-weight: 400;
+--link-external-color: hsl( 35, 100%, 50% );
+--link-external-color-hover: hsl( 35, 100%, calc(50% + 8%) );
+--link-external-decoration: underline;
+--link-external-decoration-hover: underline;
+--link-external-filter: none;
+--link-unresolved-color: hsl( 35, 100%, 50% );
+--link-unresolved-opacity: 0.7;
+--link-unresolved-filter: none;
+--link-unresolved-decoration-style: solid;
+--link-unresolved-decoration-color: hsla(35,
+			100%,
+			50%, 0.3);
+--list-indent: 2em;
+--list-indent-editing: 0.75em;
+--list-indent-source: 0;
+--list-spacing: 0.075em;
+--list-marker-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--list-marker-color-hover: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--list-marker-color-collapsed: hsl( 35, 100%, 50% );
+--list-bullet-border: none;
+--list-bullet-radius: 50%;
+--list-bullet-size: 0.3em;
+--list-bullet-transform: none;
+--list-numbered-style: decimal;
+--list-bullet-end-padding: 1.3rem;
+--nav-item-size: 13px;
+--nav-item-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--nav-item-color-hover: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--nav-item-color-active: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--nav-item-color-selected: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--nav-item-color-highlighted: hsl( 35, 100%, 50% );
+--nav-item-background-hover: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--nav-item-background-active: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--nav-item-background-selected: hsla(35,
+			100%,
+			50%, 0.15);
+--nav-item-padding: 4px 8px 4px 24px;
+--nav-item-parent-padding: 4px 8px 4px 24px;
+--nav-item-children-padding-start: 4px;
+--nav-item-children-margin-start: 12px;
+--nav-item-white-space: nowrap;
+--nav-indentation-guide-width: 1px;
+--nav-indentation-guide-color: hsl( 0, 0%, calc(15% + 6%) );
+--nav-collapse-icon-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--nav-collapse-icon-color-collapsed: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--nav-heading-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--nav-heading-color-hover: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--nav-heading-color-collapsed: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--nav-heading-color-collapsed-hover: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--nav-heading-weight: 500;
+--nav-heading-weight-hover: 500;
+--metadata-background: transparent;
+--metadata-display-reading: block;
+--metadata-display-editing: block;
+--metadata-max-width: none;
+--metadata-padding: 8px 0;
+--metadata-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--metadata-border-radius: 0;
+--metadata-border-width: 0;
+--metadata-divider-color: hsl( 0, 0%, calc(15% + 6%) );
+--metadata-divider-color-hover: transparent;
+--metadata-divider-color-focus: transparent;
+--metadata-divider-width: 0;
+--metadata-gap: 3px;
+--metadata-property-padding: 0;
+--metadata-property-radius: 6px;
+--metadata-property-radius-hover: 6px;
+--metadata-property-radius-focus: 6px;
+--metadata-property-background: transparent;
+--metadata-property-background-hover: transparent;
+--metadata-property-background-active: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--metadata-label-background: transparent;
+--metadata-label-background-hover: transparent;
+--metadata-label-background-active: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--metadata-label-font: Calibri, '??', '??', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--metadata-label-font-size: calc(13px * 1.07);
+--metadata-label-text-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--metadata-label-text-color-hover: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--metadata-label-width: calc(calc(13px * 1.07) * 9);
+--metadata-input-height: calc(24px * 1.75);
+--metadata-input-text-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--metadata-input-font: Calibri, '??', '??', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--metadata-input-font-size: calc(13px * 1.07);
+--metadata-input-background: transparent;
+--metadata-input-background-hover: transparent;
+--metadata-input-background-active: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--metadata-sidebar-label-font-size: 13px;
+--metadata-sidebar-input-font-size: 13px;
+--modal-background: hsl( 0, 0%, 15% );
+--modal-width: 90vw;
+--modal-height: 85vh;
+--modal-max-width: 1100px;
+--modal-max-height: 1000px;
+--modal-max-width-narrow: 800px;
+--modal-border-width: 1px;
+--modal-border-color: hsl( 0, 0%, calc(15% + 12%) );
+--modal-radius: 12px;
+--modal-community-sidebar-width: 280px;
+--pill-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--pill-color-hover: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--pill-color-remove: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--pill-color-remove-hover: hsl( 35, 100%, 50% );
+--pill-decoration: none;
+--pill-decoration-hover: none;
+--pill-background: transparent;
+--pill-background-hover: transparent;
+--pill-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--pill-border-color-hover: hsl( 0, 0%, calc(15% + 12%) );
+--pill-border-width: 1px;
+--pill-padding-x: 0.65em;
+--pill-padding-y: 0.25em;
+--pill-radius: 2em;
+--p-spacing: 1.75rem;
+--p-spacing-empty: 0rem;
+--pdf-background: hsl( 0, 0%, 15% );
+--pdf-page-background: hsl( 0, 0%, 15% );
+--pdf-shadow: none;
+--pdf-spread-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+--pdf-sidebar-background: hsl( 0, 0%, 15% );
+--pdf-thumbnail-shadow: none;
+--popover-width: 450px;
+--popover-height: 400px;
+--popover-max-height: 95vh;
+--popover-pdf-width: 450px;
+--popover-pdf-height: 400px;
+--popover-font-size: 24px;
+--prompt-input-height: 40px;
+--prompt-width: 700px;
+--prompt-max-width: 80vw;
+--prompt-max-height: 70vh;
+--prompt-border-width: 1px;
+--prompt-border-color: hsl( 0, 0%, calc(15% + 20%) );
+--radius-s: 4px;
+--radius-m: 8px;
+--radius-l: 12px;
+--radius-xl: 16px;
+--ribbon-background: hsl( 0, 0%, calc(15% - 2%) );
+--ribbon-background-collapsed: hsl( 0, 0%, 15% );
+--ribbon-width: 44px;
+--ribbon-padding: 8px 4px 12px;
+--scrollbar-active-thumb-bg: hsl( 0, 0%, calc(15% + 20%) );
+--scrollbar-bg: transparent;
+--scrollbar-thumb-bg: hsl( 0, 0%, calc(15% + 6%) );
+--search-clear-button-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--search-clear-button-size: 13px;
+--search-icon-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--search-icon-size: 18px;
+--search-result-background: hsl( 0, 0%, 15% );
+--size-2-1: 2px;
+--size-2-2: 4px;
+--size-2-3: 6px;
+--size-4-1: 4px;
+--size-4-2: 8px;
+--size-4-3: 12px;
+--size-4-4: 16px;
+--size-4-5: 20px;
+--size-4-6: 24px;
+--size-4-8: 32px;
+--size-4-9: 36px;
+--size-4-10: 40px;
+--size-4-12: 48px;
+--size-4-16: 64px;
+--size-4-18: 72px;
+--sidebar-markdown-font-size: calc(24px * 0.9);
+--sidebar-tab-text-display: none;
+--slider-thumb-border-width: 1px;
+--slider-thumb-border-color: hsl( 0, 0%, calc(15% + 12%) );
+--slider-thumb-height: 18px;
+--slider-thumb-width: 18px;
+--slider-thumb-y: -6px;
+--slider-thumb-radius: 50%;
+--slider-s-thumb-size: 15px;
+--slider-s-thumb-position: -5px;
+--slider-track-background: hsl( 0, 0%, calc(15% + 6%) );
+--slider-track-height: 3px;
+--status-bar-background: hsl( 0, 0%, calc(15% - 2%) );
+--status-bar-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--status-bar-border-width: 1px 0 0 1px;
+--status-bar-font-size: 11px;
+--status-bar-text-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--status-bar-position: fixed;
+--status-bar-radius: 8px 0 0 0;
+--status-bar-scroll-padding: calc(11px + 18px);
+--sync-avatar-color-current-user: transparent;
+--sync-avatar-color-1: #d04255;
+--sync-avatar-color-2: #d5763f;
+--sync-avatar-color-3: #e5b567;
+--sync-avatar-color-4: #a8c373;
+--sync-avatar-color-5: #73bbb2;
+--sync-avatar-color-6: #6c99bb;
+--sync-avatar-color-7: #9e86c8;
+--sync-avatar-color-8: #b05279;
+--swatch-radius: 14px;
+--swatch-height: 24px;
+--swatch-width: 24px;
+--swatch-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+--tab-background-active: hsl( 0, 0%, 15% );
+--tab-text-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--tab-text-color-active: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--tab-text-color-focused: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--tab-text-color-focused-active: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--tab-text-color-focused-highlighted: hsl( 35, 100%, 50% );
+--tab-text-color-focused-active-current: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--tab-font-size: 13px;
+--tab-container-background: hsl( 0, 0%, calc(15% - 2%) );
+--tab-divider-color: hsl( 0, 0%, calc(15% + 12%) );
+--tab-outline-color: hsl( 0, 0%, calc(15% + 6%) );
+--tab-outline-width: 1px;
+--tab-curve: 6px;
+--tab-radius: 4px;
+--tab-radius-active: 6px 6px 0 0;
+--tab-width: 200px;
+--tab-max-width: 320px;
+--tab-switcher-menubar-background: hsl( 0, 0%, 15% );
+--tab-switcher-background: hsl( 0, 0%, calc(15% - 2%) );
+--tab-switcher-preview-radius: 16px;
+--tab-switcher-preview-background-shadow: 0 4px 30px 2px rgba(0, 0, 0, 0.2);
+--tab-switcher-preview-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05);
+--tab-switcher-preview-shadow-active: 0 0 0 2px hsl(35, 100%, 50%);
+--tab-stacked-pane-width: 700px;
+--tab-stacked-header-width: 40px;
+--tab-stacked-font-size: 13px;
+--tab-stacked-font-weight: 400;
+--tab-stacked-text-align: start;
+--tab-stacked-text-transform: rotate(0deg);
+--tab-stacked-text-writing-mode: vertical-lr;
+--tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
+--table-background: transparent;
+--table-border-width: 1px;
+--table-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--table-white-space: normal;
+--table-header-background: transparent;
+--table-header-border-width: 0;
+--table-header-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--table-header-size: calc(24px * 0.875);
+--table-header-weight: calc(400 + 200);
+--table-header-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--table-line-height: 1.3;
+--table-text-size: calc(24px * 0.875);
+--table-column-min-width: 6ch;
+--table-column-max-width: none;
+--table-column-alt-background: transparent;
+--table-column-first-border-width: 0;
+--table-column-last-border-width: 0;
+--table-row-background-hover: transparent;
+--table-row-alt-background: transparent;
+--table-row-alt-background-hover: transparent;
+--table-row-last-border-width: 0;
+--table-selection: hsla( 35, 50%, 40%, 30% );
+--table-selection-blend-mode: lighten;
+--table-selection-border-color: hsl( 35, 100%, 50% );
+--table-selection-border-width: 0px;
+--table-selection-border-radius: 0px;
+--table-cell-vertical-alignment: top;
+--table-drag-handle-background: transparent;
+--table-drag-handle-background-active: hsla( 35, 50%, 40%, 30% );
+--table-drag-handle-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--table-drag-handle-color-active: hsl( 35, 100%, 50% );
+--table-add-button-background: transparent;
+--table-add-button-border-width: 0px;
+--table-add-button-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--tag-size: 0.8em;
+--tag-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--tag-color-hover: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--tag-decoration: none;
+--tag-decoration-hover: none;
+--tag-background: transparent;
+--tag-background-hover: transparent;
+--tag-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--tag-border-color-hover: hsl( 0, 0%, calc(15% + 12%) );
+--tag-border-width: 1px;
+--tag-padding-x: 0.65em;
+--tag-padding-y: 0.2em;
+--tag-radius: 2em;
+--titlebar-background: hsl( 0, 0%, 15% );
+--titlebar-background-focused: hsl( 0, 0%, calc(15% - 2%) );
+--titlebar-border-width: 0px;
+--titlebar-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--titlebar-text-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--titlebar-text-color-focused: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--titlebar-text-weight: 700;
+--toggle-border-width: 2px;
+--toggle-width: 40px;
+--toggle-radius: 18px;
+--toggle-thumb-color: white;
+--toggle-thumb-radius: 18px;
+--toggle-thumb-height: 18px;
+--toggle-thumb-width: 18px;
+--toggle-s-border-width: 2px;
+--toggle-s-width: 34px;
+--toggle-s-thumb-height: 15px;
+--toggle-s-thumb-width: 15px;
+--vault-profile-display: flex;
+--vault-profile-actions-display: flex;
+--vault-profile-font-size: 13px;
+--vault-profile-font-weight: 500;
+--vault-profile-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--vault-profile-color-hover: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--workspace-background-translucent: hsla(0,0%, 15%, 0.7);
+--accent-h: 35;
+--accent-s: 100%;
+--accent-l: 50%;
+--background-primary: hsl( 0, 0%, 15% );
+--background-primary-alt: hsl( 0, 0%, calc(15% - 2%) );
+--background-secondary: hsl( 0, 0%, calc(15% - 2%) );
+--background-modifier-hover: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--background-modifier-active-hover: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--background-modifier-border: hsl( 0, 0%, calc(15% + 6%) );
+--background-modifier-border-hover: hsl( 0, 0%, calc(15% + 12%) );
+--background-modifier-border-focus: hsl( 0, 0%, calc(15% + 20%) );
+--background-modifier-error-rgb: 208,66,85;
+--background-modifier-error: rgba(255,20,20,0.12);
+--background-modifier-error-hover: rgba(255,20,20,0.18);
+--background-modifier-success-rgb: 168,195,115;
+--background-modifier-success: #a8c373;
+--background-modifier-message: rgba(0, 0, 0, 0.9);
+--background-modifier-form-field: hsl( 0, 0%, 15% );
+--text-normal: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--text-muted: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--text-faint: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--text-on-accent: black;
+--text-on-accent-inverted: black;
+--text-error: #d04255;
+--text-warning: #d5763f;
+--text-success: #a8c373;
+--text-selection: hsla( 35, 50%, 40%, 30% );
+--text-highlight-bg-rgb: 255, 208, 0;
+--text-highlight-bg: rgba(255, 177, 80, 0.3);
+--text-accent: hsl( 35, 100%, 50% );
+--text-accent-hover: hsl( 35, 100%, calc(50% + 8%) );
+--interactive-normal: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--interactive-hover: hsl( 0, 0%, calc(15% + 6%) );
+--interactive-accent-hsl: 35,
+			100%,
+			50%;
+--interactive-accent: hsl( 35, 100%, calc(50% - 5%) );
+--interactive-accent-hover: hsl( 35, 100%, 50% );
+--highlight-mix-blend-mode: lighten;
+--mono-rgb-0: 0, 0, 0;
+--mono-rgb-100: 255, 255, 255;
+--color-red-rgb: 208,66,85;
+--color-red: #d04255;
+--color-orange-rgb: 213,118,63;
+--color-orange: #d5763f;
+--color-yellow-rgb: 229,181,103;
+--color-yellow: #e5b567;
+--color-green-rgb: 168,195,115;
+--color-green: #a8c373;
+--color-cyan-rgb: 115,187,178;
+--color-cyan: #73bbb2;
+--color-blue-rgb: 108,153,187;
+--color-blue: #6c99bb;
+--color-purple-rgb: 158,134,200;
+--color-purple: #9e86c8;
+--color-pink-rgb: 176,82,121;
+--color-pink: #b05279;
+--color-base-00: #1e1e1e;
+--color-base-05: #212121;
+--color-base-10: #242424;
+--color-base-20: #262626;
+--color-base-25: #2a2a2a;
+--color-base-30: #363636;
+--color-base-35: #3f3f3f;
+--color-base-40: #555555;
+--color-base-50: #666666;
+--color-base-60: #999999;
+--color-base-70: #b3b3b3;
+--color-base-100: #dadada;
+--color-accent-hsl: 35,
+			100%,
+			50%;
+--color-accent: hsl(35, 100%, 50%);
+--color-accent-1: hsl(calc(35 - 3), calc(100% * 1.02), calc(50% * 1.15));
+--color-accent-2: hsl(calc(35 - 5), calc(100% * 1.05), calc(50% * 1.29));
+--background-secondary-alt: hsl( 0, 0%, 15% );
+--background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+--background-modifier-cover: hsla(0,0%, calc(15% - 12%), 0.5);
+--input-shadow: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+		0 2px 4px 0 rgba(0,0,0,.15),
+		0 1px 1.5px 0 rgba(0,0,0,.1),
+		0 1px 2px 0 rgba(0,0,0,.2),
+		0 0 0 0 transparent;
+--input-shadow-hover: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
+		0 2px 3px 0 rgba(0,0,0,.3),
+		0 1px 1.5px 0 rgba(0,0,0,.2),
+		0 1px 2px 0 rgba(0,0,0,.4),
+		0 0 0 0 transparent;
+--shadow-s: 0px 1px 2px rgba(0, 0, 0, 0.121),
+		0px 3.4px 6.7px rgba(0, 0, 0, 0.179),
+		0px 15px 30px rgba(0, 0, 0, 0.3);
+--shadow-l: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+		0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+		0px 30px 90px rgba(0, 0, 0, 0.2);
+--font-default: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--font-monospace-default: ui-monospace, SFMono-Regular, "Cascadia Mono", "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono", Menlo, Monaco, "Consolas", "Source Code Pro", monospace;
+--font-interface-override: Calibri;
+--font-interface-theme: '??';
+--font-interface: Calibri, '??', '??', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--font-text-override: Calibri;
+--font-text-theme: '??';
+--font-text: Calibri, '??', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--font-print-override: Calibri;
+--font-print: Calibri, Calibri, '??', 'Arial';
+--font-monospace-override: Calibri;
+--font-monospace-theme: '??';
+--font-monospace: Calibri, '??', ui-monospace, SFMono-Regular, "Cascadia Mono", "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono", Menlo, Monaco, "Consolas", "Source Code Pro", monospace;
+--font-text-size: 24px;
+--font-mermaid: Calibri, '??', ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+--zoom-factor: 1;
+--titlebar-height: 30px;
+--frame-left-space: 0px;
+--frame-right-space: 126px;
+--direction: 1;
+--pill-focus-width: calc(100% + 6px);
+--pill-focus-left-adjust: -4px;
+--canvas-color: 126, 126, 126;
+--safe-area-inset-top: 0px;
+--safe-area-inset-bottom: 0px;
+--safe-area-inset-left: 0px;
+--safe-area-inset-right: 0px;
+--mobile-sidebar-background: hsl( 0, 0%, 15% );
+--oz-fta-folder-font-size: 13px;
+--oz-fta-file-font-size: 12px;
+--oz-fta-folder-icon-color: hsl( 35, 100%, calc(50% - 5%) );
+--oz-fta-folder-indendation-guide-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--oz-fta-header-background-color: hsl( 0, 0%, 15% );
+--oz-fta-header-icon-colors: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--oz-fta-file-pane-foldername-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--oz-fta-folder-pane-file-name-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--oz-fta-header-icon-colors-accent-rgb: hsl( 35, 100%, 50% );
+--oz-fta-all-panes-active-text-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--oz-fta-file-pane-active-file-background-color: hsl( 0, 0%, 15% );
+--oz-fta-file-pane-file-name-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--tasks-details-icon: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z'/></svg>");
+--mk-ui-divider: hsl( 0, 0%, calc(15% + 6%) );
+--mk-ui-border: hsl( 0, 0%, calc(15% + 6%) );
+--mk-ui-border-accent: hsl( 35, 100%, calc(50% - 5%) );
+--mk-ui-radius-small: 4px;
+--mk-ui-radius-medium: 8px;
+--mk-ui-radius-large: 12px;
+--mk-ui-background-overlay: rgba(0, 0, 0, .5);
+--mk-ui-border-overlay: rgba(15, 15, 15, .5);
+--mk-ui-background-blur: hsl( 0, 0%, 15% );
+--mk-ui-border-hover: hsl( 0, 0%, calc(15% + 12%) );
+--mk-ui-handle-color: rgba(70, 79, 200, 1);
+--mk-ui-handle-color-hover: #eb3b5a22;
+--mk-ui-handle-outline: rgba(255, 255, 255, .8);
+--mk-ui-handle-fill: #fff;
+--mk-ui-active: hsl( 35, 100%, calc(50% - 5%) );
+--mk-ui-active-hover: hsl( 0, 0%, calc(15% + 6%) );
+--mk-ui-active-normal: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--mk-ui-background: hsl( 0, 0%, 15% );
+--mk-ui-background-variant: hsl( 0, 0%, calc(15% - 2%) );
+--mk-ui-background-contrast: hsl( 0, 0%, calc(15% - 2%) );
+--mk-ui-background-selected: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--mk-ui-background-reverse: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--mk-ui-background-hover: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--mk-ui-background-menu: hsl( 0, 0%, calc(15% - 2%) );
+--mk-ui-background-menu-input: hsl( 0, 0%, 15% );
+--mk-ui-background-menu-hover: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--mk-ui-background-input: hsl( 0, 0%, 15% );
+--mk-ui-text-primary: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--mk-ui-text-secondary: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--mk-ui-text-tertiary: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--mk-ui-text-accent: black;
+--mk-ui-text-reverse: hsl( 0, 0%, 15% );
+--mk-ui-text-error: #eb3b5a;
+--mk-shadow-card: 0px 1px 4px 0px rgba(0, 0, 0, .4);
+--mk-shadow-menu: 0px 0px 32px 0px rgba(0, 0, 0, .2);
+--mk-color-none: rgba(255, 255, 255, .025);
+--mk-color-blue: #3867d6;
+--mk-color-green: #20bf6b;
+--mk-color-orange: #fa8231;
+--mk-color-purple: #8854d0;
+--mk-color-red: #eb3b5a;
+--mk-color-turquoise: #0fb9b1;
+--mk-color-yellow: #E5A216;
+--mk-color-charcoal: #4b6584;
+--mk-color-teal: #2d98da;
+--mk-color-pink: #E83289;
+--mk-color-brown: #68381E;
+--mk-color-gray: #8392A4;
+--mk-color-black: #000000;
+--mk-color-white: #ffffff;
+--mk-color-base-0: #1e1e1e;
+--mk-color-base-10: #242424;
+--mk-color-base-20: #262626;
+--mk-color-base-30: #363636;
+--mk-color-base-40: #555555;
+--mk-color-base-50: #666666;
+--mk-color-base-60: #999999;
+--mk-color-base-70: #b3b3b3;
+--mk-color-base-100: #dadada;
+--mk-color-selection: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--mk-color-ui-accent: hsl( 35, 100%, 50% );
+--mk-layer-editor-popover: 100;
+--mk-layer-editor-overlay: 100;
+--max-width: 88%;
+--page-width: 700px;
+--at-button-height: 48px;
+--at-row-count: 1;
+--toolbar-horizontal-offset: 0px;
+--toolbar-vertical-offset: 0px;
+--editing-toolbar-background-color: #F8F9FA;
+--editing-toolbar-icon-color: #6B7280;
+--toolbar-icon-size: 18px;
+--calloutmanager-reset-button-disabled-opacity: 0.3;
+--calloutmanager-icon-picker-size: 100px;
+--calloutmanager-icon-picker-gap: 8px;
+--calloutmanager-icon-picker-icon-size: 2.5em;
+--calloutmanager-icon-picker-id-size: 0.75em;
+--calloutmanager-icon-preview-icon-size: 1em;
+--calloutmanager-icon-preview-id-size: 0.8em;
+--dynamic-outline-li-padding-tab-size: 16px;
+--dynamic-outline-collapse-icon-width: 12px;
+--dynamic-outline-background-modifier-hover-lighter: rgba(
+		255, 255, 255,
+		0.045
+	);
+--dynamic-outline-background-accent: hsla(
+		35,
+		100%,
+		50%,
+		0.075
+	);
+--dynamic-outline-input-height: 32px;
+--dynamic-outline-input-background-color: hsl( 0, 0%, 15% );
+--dynamic-outline-background: hsl( 0, 0%, 15% );
+--dynamic-outline-text-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--dynamic-outline-font-size: 24px;
+--dynamic-outline-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--dynamic-outline-border-color: hsl( 0, 0%, calc(15% + 6%) );
+--dynamic-outline-window-width: 256px;
+--dynamic-outline-opacity: 1;
+--dynamic-outline-window-gap: 4px;
+--dynamic-outline-window-offset-top: 0px;
+--dynamic-outline-window-offset-bottom: 0px;
+--dynamic-outline-status-bar-height-offset-bottom: 30px;
+--dynamic-outline-top: calc(
+		40px + 4px +
+			0px
+	);
+--dynamic-outline-top-editing-toolbar: calc(
+		40px + 38px + 4px +
+			0px
+	);
+--dynamic-outline-bottom: calc(
+		4px +
+			0px +
+			30px
+	);
+--dynamic-outline-background-hover: rgba(
+		255, 255, 255,
+		0.045
+	);
+--dynamic-outline-active-heading-pill-color: hsl( 35, 100%, calc(50% - 5%) );
+--dynamic-outline-highlight-font-weight: 400;
+--dynamic-outline-active-heading-background: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--dynamic-outline-h1-text-color: #d04255;
+--dynamic-outline-h2-text-color: #d5763f;
+--dynamic-outline-h3-text-color: #e5b567;
+--dynamic-outline-h4-text-color: #a8c373;
+--dynamic-outline-h5-text-color: #6c99bb;
+--dynamic-outline-h6-text-color: #9e86c8;
+--dynamic-outline-h1-font-weight: 700;
+--dynamic-outline-h2-font-weight: 400;
+--dynamic-outline-h3-font-weight: 400;
+--dynamic-outline-h4-font-weight: 400;
+--dynamic-outline-h5-font-weight: 400;
+--dynamic-outline-h6-font-weight: 400;
+--dynamic-outline-h1-font-style: normal;
+--dynamic-outline-h2-font-style: normal;
+--dynamic-outline-h3-font-style: normal;
+--dynamic-outline-h4-font-style: normal;
+--dynamic-outline-h5-font-style: normal;
+--dynamic-outline-h6-font-style: normal;
+--dynamic-outline-h1-font-variant: normal;
+--dynamic-outline-h2-font-variant: normal;
+--dynamic-outline-h3-font-variant: normal;
+--dynamic-outline-h4-font-variant: normal;
+--dynamic-outline-h5-font-variant: small-caps;
+--dynamic-outline-h6-font-variant: small-caps;
+--dynamic-outline-shadow-color: rgba(0, 0, 0, 0.2);
+--font-editor-theme: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
+--font-editor: ,Calibri,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
+--blockquote-style: normal;
+--normal-weight: 400;
+--line-width: 40rem;
+--line-height: 1.5;
+--max-col-width: 18em;
+--icon-muted: 0.5;
+--nested-padding: 1.1em;
+--folding-offset: 32px;
+--list-edit-offset: 0.5em;
+--metadata-label-width-multiplier: 9;
+--mobile-left-sidebar-width: 280pt;
+--mobile-right-sidebar-width: 240pt;
+--top-left-padding-y: 0px;
+--image-muted: 0.7;
+--image-radius: 4px;
+--base-h: 0;
+--base-s: 0%;
+--base-l: 15%;
+--bg1: hsl( 0, 0%, 15% );
+--bg2: hsl( 0, 0%, calc(15% - 2%) );
+--bg3: hsla( 0, 0%, calc(15% + 40%), 0.12 );
+--ui1: hsl( 0, 0%, calc(15% + 6%) );
+--ui2: hsl( 0, 0%, calc(15% + 12%) );
+--ui3: hsl( 0, 0%, calc(15% + 20%) );
+--tx1: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--tx2: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--tx3: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--tx4: hsl( 0, calc(0% - 10%), calc(15% + 50%) );
+--ax1: hsl( 35, 100%, 50% );
+--ax2: hsl( 35, 100%, calc(50% + 8%) );
+--ax3: hsl( 35, 100%, calc(50% - 5%) );
+--hl1: hsla( 35, 50%, 40%, 30% );
+--hl2: rgba(255, 177, 80, 0.3);
+--sp1: white;
+--mono100: white;
+--mono0: black;
+--background-modifier-accent: hsl( 35, 100%, calc(50% - 5%) );
+--background-modifier-form-field-highlighted: hsl( 0, 0%, 15% );
+--background-table-rows: hsl( 0, 0%, calc(15% - 2%) );
+--frame-divider-color: hsl( 0, 0%, calc(15% + 6%) );
+--icon-hex: black;
+--quote-opening-modifier: hsl( 0, 0%, calc(15% + 12%) );
+--text-blockquote: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--text-bold: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--text-code: hsl( 0, calc(0% - 10%), calc(15% + 50%) );
+--text-italic: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--text-formatting: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--title-color-inactive: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--title-color: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--interactive-accent-rgb: 66,66,66;
+--active-line-bg: rgba(255,255,255,0.04);
+--text-highlight-bg-active: rgba(255, 255, 255, 0.1);
+--shadow-color: rgba(0, 0, 0, 0.3);
+--btn-shadow-color: rgba(0, 0, 0, 0.2);
+--font-adaptive-normal: 24px;
+--font-adaptive-small: calc(13px * 1.07);
+--font-adaptive-smaller: 13px;
+--font-adaptive-smallest: 11px;
+--line-width-wide: 50rem;
+--font-code: calc(24px * 0.9);
+--line-number-color: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--line-number-color-active: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--hider-ribbon-display: none;
+--ribbon-animation-duration: 0.1s;
+--progress-outline: hsl( 0, 0%, calc(15% + 6%) );
+--progress-complete: hsl( 35, 100%, 50% );
+--checkbox-top: 2px;
+--checkbox-left: 0px;
+--checkbox-margin: 0px 6px 0px -2em;
+--embed-decoration-style: solid;
+--embed-decoration-color: hsl( 0, 0%, calc(15% + 12%) );
+--adaptive-list-edit-offset: 0.5em;
+--pdf-dark-opacity: 1;
+--table-edge-cell-padding-first: 0;
+--table-edge-cell-padding-last: 0;
+--table-cell-padding: 4px 10px;
+--focus-animation-duration: 0.1s;
+--content-margin: auto;
+--content-margin-start: max( calc(50% - 40rem/2), calc(50% - 88%/2) );
+--content-line-width: min(40rem, 88%);
+--container-table-max-width: 88%;
+--table-max-width: none;
+--table-width: auto;
+--table-wrapper-width: fit-content;
+--container-dataview-table-width: 40rem;
+--container-img-width: 40rem;
+--container-img-max-width: 88%;
+--img-max-width: 100%;
+--img-width: auto;
+--img-margin-start: max( calc(50% - 40rem/2), calc(50% - 88%/2) );
+--img-line-width: min(40rem, 88%);
+--container-chart-width: 40rem;
+--container-chart-max-width: 88%;
+--chart-max-width: none;
+--chart-width: auto;
+--container-map-width: 40rem;
+--container-map-max-width: 88%;
+--map-max-width: none;
+--map-width: auto;
+--container-iframe-width: 40rem;
+--container-iframe-max-width: 88%;
+--iframe-max-width: none;
+--iframe-width: 100%;
+--container-table-width: calc(40rem + 16px*2);
+--table-drag-space: 16px;
+--container-table-margin: calc(max( calc(50% - 40rem/2), calc(50% - 88%/2) ) - 16px);
+--table-drag-padding: 16px;
+--cards-min-width: 180px;
+--cards-max-width: 1fr;
+--cards-mobile-width: 120px;
+--cards-image-height: 400px;
+--cards-padding: 1.2em;
+--cards-image-fit: contain;
+--cards-background: transparent;
+--cards-background-hover: transparent;
+--cards-border-width: 1px;
+--cards-aspect-ratio: auto;
+--cards-columns: repeat(auto-fit, minmax(180px, 1fr));
+--frame-background: hsl( 35, 100%, calc(50% - 25%));
+--frame-icon-color: hsl( 35, calc(100% - 10%), calc(calc(50% - 25%) + 25%));
+--frame-background-h: 35;
+--frame-background-s: 100%;
+--frame-background-l: calc(50% - 25%);
+--frame-outline-color: hsla( 35, calc(100% - 2%), calc(calc(50% - 25%) + 6.5%), 1 );
+--frame-muted-color: hsl( 35, calc(100% - 10%), calc(calc(50% - 25%) + 25%));
+--minimal-tab-text-color: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--image-mix: normal;
+--image-grid-fit: cover;
+--image-grid-background: transparent;
+--img-grid-gap: 0.5rem;
+--minimal-tab-text-color-active: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--h1l: hsl( 0, 0%, calc(15% + 6%) );
+--h2l: hsl( 0, 0%, calc(15% + 6%) );
+--h3l: hsl( 0, 0%, calc(15% + 6%) );
+--h4l: hsl( 0, 0%, calc(15% + 6%) );
+--h5l: hsl( 0, 0%, calc(15% + 6%) );
+--h6l: hsl( 0, 0%, calc(15% + 6%) );
+--calendar-dot-active: hsl( 0, calc(0% - 10%), calc(15% + 20%) );
+--calendar-dot-today: hsl( 35, 100%, 50% );
+--chart-color-1: #6c99bb;
+--chart-color-2: #d04255;
+--chart-color-3: #e5b567;
+--chart-color-4: #a8c373;
+--chart-color-5: #d5763f;
+--chart-color-6: #9e86c8;
+--chart-color-7: #73bbb2;
+--chart-color-8: #b05279;
+--he-title-bar-inactive-bg: hsl( 0, 0%, calc(15% - 2%) );
+--he-title-bar-inactive-pinned-bg: hsl( 0, 0%, calc(15% - 2%) );
+--he-title-bar-active-pinned-bg: hsl( 0, 0%, calc(15% - 2%) );
+--he-title-bar-active-bg: hsl( 0, 0%, calc(15% - 2%) );
+--he-title-bar-inactive-fg: hsl( 0, calc(0% - 20%), calc(15% + 45%) );
+--he-title-bar-active-fg: hsl( 0, calc(0% - 10%), calc(15% + 67%) );
+--he-title-bar-font-size: 14px;
+--popover-shadow: 0px 2.7px 3.1px rgba(0, 0, 0, 0.081),0px 5.9px 8.7px rgba(0, 0, 0, 0.131),0px 10.4px 18.1px rgba(0, 0, 0, 0.18),0px 20px 40px rgba(0, 0, 0, 0.28);
+--kanban-border: 0px;
+--leaflet-buttons: hsl( 0, 0%, calc(15% - 2%) );
+--leaflet-borders: rgba(255,255,255,0.1);
+margin: 0;
+background-color: var(--mk-ui-background);
+text-rendering: optimizeLegibility;
+font-family: var(--font-interface);
+line-height: var(--line-height-tight);
+font-size: var(--font-ui-medium);
+color: var(--text-normal);
+-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+display: flex;
+height: 100%;
+overflow: hidden;
+            }
+ div.main {
+            display: flex;
+flex-direction: column;
+overflow: auto;
+position: relative;
+flex: 1;
+            }
+ div.main h1 {
+            --font-weight: var(--h1-weight);
+font-variant: var(--h1-variant);
+letter-spacing: -0.015em;
+line-height: var(--h1-line-height);
+font-size: var(--h1-size);
+color: var(--h1-color);
+font-style: var(--h1-style);
+font-family: var(--h1-font);
+font-weight: var(--font-weight);
+            }
+
+ div.main h2 {
+            --font-weight: var(--h2-weight);
+font-variant: var(--h2-variant);
+letter-spacing: -0.015em;
+line-height: var(--h2-line-height);
+font-size: var(--h2-size);
+color: var(--h2-color);
+font-style: var(--h2-style);
+font-family: var(--h2-font);
+font-weight: var(--font-weight);
+            }
+
+ div.main h3 {
+            --font-weight: var(--h3-weight);
+font-variant: var(--h3-variant);
+letter-spacing: -0.015em;
+line-height: var(--h3-line-height);
+font-size: var(--h3-size);
+color: var(--h3-color);
+font-style: var(--h3-style);
+font-family: var(--h3-font);
+font-weight: var(--font-weight);
+            }
+
+ div.main h4 {
+            --font-weight: var(--h4-weight);
+font-variant: var(--h4-variant);
+letter-spacing: 0.015em;
+line-height: var(--h4-line-height);
+font-size: var(--h4-size);
+color: var(--h4-color);
+font-style: var(--h4-style);
+font-family: var(--h4-font);
+font-weight: var(--font-weight);
+            }
+
+ div.main h5 {
+            --font-weight: var(--h5-weight);
+font-variant: var(--h5-variant);
+letter-spacing: 0.015em;
+line-height: var(--h5-line-height);
+font-size: var(--h5-size);
+color: var(--h5-color);
+font-style: var(--h5-style);
+font-family: var(--h5-font);
+font-weight: var(--font-weight);
+            }
+
+ div.main h6 {
+            --font-weight: var(--h6-weight);
+font-variant: var(--h6-variant);
+letter-spacing: 0.015em;
+line-height: var(--h6-line-height);
+font-size: var(--h6-size);
+color: var(--h6-color);
+font-style: var(--h6-style);
+font-family: var(--h6-font);
+font-weight: var(--font-weight);
+            }
+
+ div.main div[data-type='contextView'] {
+            display: flex;
+flex-direction: column;
+            }
+
+ div.main div[data-type='contextGroup'] {
+            display: flex;
+flex-direction: column;
+            }
+
+ div.main a[data-type='contextItem'] {
+            display: flex;
+flex-direction: column;
+text-decoration: none;
+color: inherit;
+            }
+ div.main a[data-type='contextItem']:hover {
+            background: var(--mk-ui-background-hover)!important;
+            }
+
+ div.main ol {
+            padding-inline-start: 0;
+margin-block-start: var(--p-spacing);
+margin-block-end: var(--p-spacing);
+            }
+ div.main ol li {
+            margin-inline-start: 3ch;
+            }
+
+ div.main ul {
+            padding-inline-start: 0;
+margin-block-start: var(--p-spacing);
+margin-block-end: var(--p-spacing);
+list-style-type: \200B;
+            }
+ div.main ul li {
+            margin-inline-start: 3ch;
+            }
+
+ div.main li[data-type='taskList'] {
+            padding-inline-start: 0;
+margin-block-start: var(--p-spacing);
+margin-block-end: var(--p-spacing);
+            }
+ div.main li[data-type='taskList'] task {
+            display: flex;
+flex-direction: row;
+align-items: center;
+margin-block-start: var(--p-spacing);
+margin-block-end: var(--p-spacing);
+            }
+ div.main li[data-type='taskList'] task input {
+            margin-inline-start: calc(var(--checkbox-size)* -1.5);
+            }
+
+ div.main li {
+            margin-inline-start: 3ch;
+            }
+
+ div.main a {
+            --font-weight: var(--link-weight);
+color: var(--link-color);
+font-weight: var(--link-weight);
+outline: none;
+text-decoration-line: var(--link-decoration);
+text-decoration-thickness: var(--link-decoration-thickness);
+cursor: var(--cursor-link);
+transition: opacity 0.15s ease-in-out;
+            }
+
+ div.main span {
+            color: var(--span-color);
+font-weight: var(--span-weight);
+font-style: var(--span-style);
+font-family: var(--span-font);
+font-size: var(--span-size);
+line-height: var(--span-line-height);
+letter-spacing: var(--span-spacing);
+text-transform: var(--span-transform);
+            }
+
+ div.main table {
+            border-collapse: collapse;
+width: 100%;
+margin-block-start: var(--p-spacing);
+margin-block-end: var(--p-spacing);
+            }
+ div.main table thead {
+            
+            }
+ div.main table thead tr {
+            
+            }
+ div.main table thead tr td {
+            
+            }
+
+ div.main table tbody {
+            
+            }
+ div.main table tbody tr {
+            
+            }
+ div.main table tbody tr td {
+            padding: var(--size-2-2) var(--size-4-2);
+border: var(--table-border-width) solid var(--table-border-color);
+max-width: var(--table-column-max-width);
+min-width: var(--table-column-min-width);
+vertical-align: var(--table-cell-vertical-alignment);
+            }
+
+ div.main input {
+            margin-inline-start: 3ch;
+            }
+
+ div.main pre {
+            position: relative;
+padding: var(--size-4-3) var(--size-4-4);
+min-height: 38px;
+background-color: var(--code-background);
+border-radius: var(--code-radius);
+white-space: var(--code-white-space);
+border: var(--code-border-width) solid var(--code-border-color);
+overflow-x: auto;
+            }
+
+ div.main br {
+            margin-inline-start: 3ch;
+            }
+
+ div.main hr {
+            border: none;
+border-top: var(--hr-thickness) solid;
+border-color: var(--hr-color);
+            }
+
+ div.main img {
+            max-width: 100%;
+            }
+
+ div.main code {
+            
+            }
+
+ div.main blockquote {
+            color: var(--blockquote-color);
+font-style: var(--blockquote-font-style);
+background-color: var(--blockquote-background-color);
+border-inline-start: var(--blockquote-border-thickness) solid var(--blockquote-border-color);
+padding-top: 0;
+padding-bottom: 0;
+padding-inline-start: var(--size-4-6);
+margin-inline-start: 0;
+margin-inline-end: 0;
+            }
+
+ div.main p {
+            
+            }
+
+ div.main strong {
+            
+            }
+
+ div.main em {
+            
+            }
+
+ div.main s {
+            
+            }
+</style><title>مصنفات وكتب</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="var(--theme-color)"><meta name="description" content="مصنفات وكتب"><link rel="icon" href="data:image/svg+xml,
+    &#x3C;svg xmlns=&#x22;http://www.w3.org/2000/svg&#x22; viewBox=&#x22;0 0 18 18&#x22;&#x3E;
+      &#x3C;text x=&#x22;50%&#x22; y=&#x22;50%&#x22; dominant-baseline=&#x22;central&#x22; text-anchor=&#x22;middle&#x22; font-size=&#x22;114%&#x22;&#x3E;&#x1F4DA;&#x3C;/text&#x3E;
+    &#x3C;/svg&#x3E;
+    " type="image/svg+xml"></head><body><div class="nav">
+  <style>
+    .nav {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      position: relative;
+      width: 300px;
+      padding: 24px 8px;
+    }
+      .nav-item.nav-root {
+      padding-left: 0;
+      }
+    .nav-root > .nav-contents > .nav-spacer {
+      width: 0;
+    }
+    .nav-item {
+      display: none;
+      flex-direction: column;
+      padding-left: 16px;
+      gap: 2px;
+    }
+      .nav-contents.active {
+        background: var(--mk-ui-background-selected);
+      }
+    .nav-item.expanded, .nav-item.expanded > .nav-item {
+      display: flex;
+    }
+    .nav-contents {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    .nav-collapse {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      cursor: pointer;
+      color: var(--mk-ui-text-tertiary);
+      transition: transform 0.2s ease;
+      transform: rotate(0deg);
+      transform-origin: center;
+    }
+      .nav-spacer {
+        width: 14px;
+        height: 14px;
+        cursor: default;
+}
+      .nav-contents:hover  {
+      background: var(--mk-ui-background-hover);
+    }
+    .nav-item.expanded > .nav-contents > .nav-collapse {
+      transform: rotate(90deg);
+    }
+    .nav-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      color: var(--mk-ui-text-secondary);
+    }
+    .nav-name {
+      flex: 1;
+      font-size: 14px;
+      color: var(--mk-ui-text-secondary);
+      text-decoration: none;
+      text-transform: none;
+      text-align: left;
+      line-height: 24px;
+      transition: color 0.2s ease;
+      border-radius: var(--file-border-radius);
+      background: var(--file-background);
+    }
+      .main {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        position: relative;
+        flex: 1;
+      }
+      </style>
+  
+      <div class="nav-item expanded nav-root" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;">
+      <div class="nav-contents active" onclick="event.stopPropagation();window.location.href='./index.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" font-family="Apple Color Emoji, Android Emoji, Segoe UI">
+      <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="114%">📚</text>
+    </svg>
+    </div>
+        <div class="nav-name">مصنفات وكتب</div>
+        </div>
+        
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x623;&#x646;&#x633; &#x627;&#x644;&#x645;&#x641;&#x636;&#x648;&#x644;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x623;&#x646;&#x633; &#x627;&#x644;&#x645;&#x641;&#x636;&#x648;&#x644;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x623;&#x646;&#x633; &#x627;&#x644;&#x645;&#x641;&#x636;&#x648;&#x644;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">أنس المفضول</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x625;&#x62D;&#x633;&#x627;&#x646;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x627;&#x644;&#x625;&#x62D;&#x633;&#x627;&#x646;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x625;&#x62D;&#x633;&#x627;&#x646;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">الإحسان</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x628;&#x64A;&#x627;&#x646; &#x641;&#x64A; &#x627;&#x644;&#x627;&#x62D;&#x62A;&#x62C;&#x627;&#x62C; &#x628;&#x627;&#x644;&#x633;&#x646;&#x629; &#x648;&#x627;&#x644;&#x642;&#x631;&#x622;&#x646;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x627;&#x644;&#x628;&#x64A;&#x627;&#x646; &#x641;&#x64A; &#x627;&#x644;&#x627;&#x62D;&#x62A;&#x62C;&#x627;&#x62C; &#x628;&#x627;&#x644;&#x633;&#x646;&#x629; &#x648;&#x627;&#x644;&#x642;&#x631;&#x622;&#x646;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x628;&#x64A;&#x627;&#x646; &#x641;&#x64A; &#x627;&#x644;&#x627;&#x62D;&#x62A;&#x62C;&#x627;&#x62C; &#x628;&#x627;&#x644;&#x633;&#x646;&#x629; &#x648;&#x627;&#x644;&#x642;&#x631;&#x622;&#x646;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">البيان في الاحتجاج بالسنة والقرآن</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x62F;&#x639;&#x627;&#x621; &#x648;&#x627;&#x644;&#x639;&#x631;&#x634;.mdenc">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x627;&#x644;&#x62F;&#x639;&#x627;&#x621; &#x648;&#x627;&#x644;&#x639;&#x631;&#x634;.mdenc';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x62F;&#x639;&#x627;&#x621; &#x648;&#x627;&#x644;&#x639;&#x631;&#x634;.mdenc">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">الدعاء والعرش</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x62D;&#x62C;&#x629; &#x627;&#x644;&#x628;&#x627;&#x644;&#x63A;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x642;&#x62F;&#x631;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x627;&#x644;&#x62D;&#x62C;&#x629; &#x627;&#x644;&#x628;&#x627;&#x644;&#x63A;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x642;&#x62F;&#x631;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x62D;&#x62C;&#x629; &#x627;&#x644;&#x628;&#x627;&#x644;&#x63A;&#x629; &#x641;&#x64A; &#x627;&#x644;&#x642;&#x62F;&#x631;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">الحجة البالغة في القدر</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x62A;&#x631;&#x62C;&#x64A;&#x62D;&#x627;&#x62A; &#x641;&#x64A; &#x62A;&#x635;&#x62D;&#x64A;&#x62D; &#x627;&#x644;&#x623;&#x62D;&#x627;&#x62F;&#x64A;&#x62B;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x627;&#x644;&#x62A;&#x631;&#x62C;&#x64A;&#x62D;&#x627;&#x62A; &#x641;&#x64A; &#x62A;&#x635;&#x62D;&#x64A;&#x62D; &#x627;&#x644;&#x623;&#x62D;&#x627;&#x62F;&#x64A;&#x62B;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x62A;&#x631;&#x62C;&#x64A;&#x62D;&#x627;&#x62A; &#x641;&#x64A; &#x62A;&#x635;&#x62D;&#x64A;&#x62D; &#x627;&#x644;&#x623;&#x62D;&#x627;&#x62F;&#x64A;&#x62B;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">الترجيحات في تصحيح الأحاديث</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x628;&#x631;&#x627;&#x647;&#x64A;&#x646; &#x627;&#x644;&#x646;&#x628;&#x648;&#x629;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x628;&#x631;&#x627;&#x647;&#x64A;&#x646; &#x627;&#x644;&#x646;&#x628;&#x648;&#x629;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x628;&#x631;&#x627;&#x647;&#x64A;&#x646; &#x627;&#x644;&#x646;&#x628;&#x648;&#x629;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">براهين النبوة</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x633;&#x631;&#x627;&#x62C; &#x627;&#x644;&#x645;&#x646;&#x64A;&#x631;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x627;&#x644;&#x633;&#x631;&#x627;&#x62C; &#x627;&#x644;&#x645;&#x646;&#x64A;&#x631;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x627;&#x644;&#x633;&#x631;&#x627;&#x62C; &#x627;&#x644;&#x645;&#x646;&#x64A;&#x631;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">السراج المنير</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x628;&#x64A;&#x627;&#x646; &#x641;&#x636;&#x644; &#x627;&#x644;&#x644;&#x647; &#x627;&#x644;&#x639;&#x638;&#x64A;&#x645; &#x641;&#x64A; &#x625;&#x631;&#x633;&#x627;&#x644; &#x627;&#x644;&#x645;&#x628;&#x639;&#x648;&#x62B; &#x631;&#x62D;&#x645;&#x629; &#x644;&#x644;&#x639;&#x627;&#x644;&#x645;&#x64A;&#x646;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x628;&#x64A;&#x627;&#x646; &#x641;&#x636;&#x644; &#x627;&#x644;&#x644;&#x647; &#x627;&#x644;&#x639;&#x638;&#x64A;&#x645; &#x641;&#x64A; &#x625;&#x631;&#x633;&#x627;&#x644; &#x627;&#x644;&#x645;&#x628;&#x639;&#x648;&#x62B; &#x631;&#x62D;&#x645;&#x629; &#x644;&#x644;&#x639;&#x627;&#x644;&#x645;&#x64A;&#x646;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x628;&#x64A;&#x627;&#x646; &#x641;&#x636;&#x644; &#x627;&#x644;&#x644;&#x647; &#x627;&#x644;&#x639;&#x638;&#x64A;&#x645; &#x641;&#x64A; &#x625;&#x631;&#x633;&#x627;&#x644; &#x627;&#x644;&#x645;&#x628;&#x639;&#x648;&#x62B; &#x631;&#x62D;&#x645;&#x629; &#x644;&#x644;&#x639;&#x627;&#x644;&#x645;&#x64A;&#x646;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">بيان فضل الله العظيم في إرسال المبعوث رحمة للعالمين</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x623;&#x633;&#x64A;&#x633; &#x627;&#x644;&#x635;&#x62D;&#x627;&#x628;&#x629; &#x644;&#x639;&#x644;&#x645; &#x627;&#x644;&#x62D;&#x62F;&#x64A;&#x62B;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x62A;&#x623;&#x633;&#x64A;&#x633; &#x627;&#x644;&#x635;&#x62D;&#x627;&#x628;&#x629; &#x644;&#x639;&#x644;&#x645; &#x627;&#x644;&#x62D;&#x62F;&#x64A;&#x62B;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x623;&#x633;&#x64A;&#x633; &#x627;&#x644;&#x635;&#x62D;&#x627;&#x628;&#x629; &#x644;&#x639;&#x644;&#x645; &#x627;&#x644;&#x62D;&#x62F;&#x64A;&#x62B;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">تأسيس الصحابة لعلم الحديث</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x62D;&#x631;&#x64A;&#x645; &#x627;&#x644;&#x628;&#x62F;&#x639;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x62A;&#x62D;&#x631;&#x64A;&#x645; &#x627;&#x644;&#x628;&#x62F;&#x639;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x62D;&#x631;&#x64A;&#x645; &#x627;&#x644;&#x628;&#x62F;&#x639;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">تحريم البدع</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x646;&#x627;&#x638;&#x631; &#x623;&#x628;&#x64A; &#x628;&#x643;&#x631; &#x648;&#x639;&#x645;&#x631;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x62A;&#x646;&#x627;&#x638;&#x631; &#x623;&#x628;&#x64A; &#x628;&#x643;&#x631; &#x648;&#x639;&#x645;&#x631;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x646;&#x627;&#x638;&#x631; &#x623;&#x628;&#x64A; &#x628;&#x643;&#x631; &#x648;&#x639;&#x645;&#x631;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">تناظر أبي بكر وعمر</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x648;&#x642;&#x64A;&#x631; &#x627;&#x644;&#x644;&#x647; &#x648;&#x642;&#x628;&#x648;&#x644; &#x627;&#x644;&#x623;&#x639;&#x645;&#x627;&#x644;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x62A;&#x648;&#x642;&#x64A;&#x631; &#x627;&#x644;&#x644;&#x647; &#x648;&#x642;&#x628;&#x648;&#x644; &#x627;&#x644;&#x623;&#x639;&#x645;&#x627;&#x644;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x62A;&#x648;&#x642;&#x64A;&#x631; &#x627;&#x644;&#x644;&#x647; &#x648;&#x642;&#x628;&#x648;&#x644; &#x627;&#x644;&#x623;&#x639;&#x645;&#x627;&#x644;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">توقير الله وقبول الأعمال</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">ربيع القلوب ونور الصدور</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x633;&#x623;&#x644;&#x629; &#x625;&#x62A;&#x64A;&#x627;&#x646; &#x627;&#x644;&#x644;&#x647; &#x641;&#x64A; &#x635;&#x648;&#x631;&#x629; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x630;&#x64A; &#x64A;&#x639;&#x631;&#x641;&#x648;&#x646;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x633;&#x623;&#x644;&#x629; &#x625;&#x62A;&#x64A;&#x627;&#x646; &#x627;&#x644;&#x644;&#x647; &#x641;&#x64A; &#x635;&#x648;&#x631;&#x629; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x630;&#x64A; &#x64A;&#x639;&#x631;&#x641;&#x648;&#x646;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x633;&#x623;&#x644;&#x629; &#x625;&#x62A;&#x64A;&#x627;&#x646; &#x627;&#x644;&#x644;&#x647; &#x641;&#x64A; &#x635;&#x648;&#x631;&#x629; &#x63A;&#x64A;&#x631; &#x627;&#x644;&#x630;&#x64A; &#x64A;&#x639;&#x631;&#x641;&#x648;&#x646;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مسألة إتيان الله في صورة غير الذي يعرفون</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x631;&#x636;&#x627;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x631;&#x636;&#x627;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x631;&#x636;&#x627;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مفاتيح الرضا</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x635;&#x628;&#x631;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x635;&#x628;&#x631;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x635;&#x628;&#x631;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مفاتيح الصبر</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x639;&#x644;&#x645; &#x648;&#x627;&#x644;&#x62A;&#x639;&#x644;&#x645;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x639;&#x644;&#x645; &#x648;&#x627;&#x644;&#x62A;&#x639;&#x644;&#x645;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x639;&#x644;&#x645; &#x648;&#x627;&#x644;&#x62A;&#x639;&#x644;&#x645;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مفاتيح العلم والتعلم</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x628;&#x631;&#x643;&#x629;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x628;&#x631;&#x643;&#x629;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x628;&#x631;&#x643;&#x629;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مفاتيح البركة</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x641;&#x636;&#x644;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x641;&#x636;&#x644;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x627;&#x644;&#x641;&#x636;&#x644;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مفاتيح الفضل</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x647;&#x644; &#x631;&#x623;&#x649; &#x627;&#x644;&#x646;&#x628;&#x64A; &#x635;&#x644;&#x649; &#x627;&#x644;&#x644;&#x647; &#x639;&#x644;&#x64A;&#x647; &#x648;&#x633;&#x644;&#x645; &#x631;&#x628;&#x647;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x647;&#x644; &#x631;&#x623;&#x649; &#x627;&#x644;&#x646;&#x628;&#x64A; &#x635;&#x644;&#x649; &#x627;&#x644;&#x644;&#x647; &#x639;&#x644;&#x64A;&#x647; &#x648;&#x633;&#x644;&#x645; &#x631;&#x628;&#x647;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x647;&#x644; &#x631;&#x623;&#x649; &#x627;&#x644;&#x646;&#x628;&#x64A; &#x635;&#x644;&#x649; &#x627;&#x644;&#x644;&#x647; &#x639;&#x644;&#x64A;&#x647; &#x648;&#x633;&#x644;&#x645; &#x631;&#x628;&#x647;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">هل رأى النبي صلى الله عليه وسلم ربه</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x647;&#x644; &#x646;&#x633;&#x64A;&#x627;&#x646; &#x634;&#x62C;&#x631;&#x629; &#x627;&#x644;&#x62D;&#x62F;&#x64A;&#x628;&#x64A;&#x629; &#x633;&#x62F; &#x644;&#x630;&#x631;&#x64A;&#x639;&#x629; &#x627;&#x644;&#x634;&#x631;&#x643;&#x61F;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x647;&#x644; &#x646;&#x633;&#x64A;&#x627;&#x646; &#x634;&#x62C;&#x631;&#x629; &#x627;&#x644;&#x62D;&#x62F;&#x64A;&#x628;&#x64A;&#x629; &#x633;&#x62F; &#x644;&#x630;&#x631;&#x64A;&#x639;&#x629; &#x627;&#x644;&#x634;&#x631;&#x643;&#x61F;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x647;&#x644; &#x646;&#x633;&#x64A;&#x627;&#x646; &#x634;&#x62C;&#x631;&#x629; &#x627;&#x644;&#x62D;&#x62F;&#x64A;&#x628;&#x64A;&#x629; &#x633;&#x62F; &#x644;&#x630;&#x631;&#x64A;&#x639;&#x629; &#x627;&#x644;&#x634;&#x631;&#x643;&#x61F;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">هل نسيان شجرة الحديبية سد لذريعة الشرك؟</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x62D;&#x644;&#x627;&#x648;&#x629; &#x627;&#x644;&#x625;&#x64A;&#x645;&#x627;&#x646;.md">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x62D;&#x644;&#x627;&#x648;&#x629; &#x627;&#x644;&#x625;&#x64A;&#x645;&#x627;&#x646;.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/&#x645;&#x641;&#x627;&#x62A;&#x64A;&#x62D; &#x62D;&#x644;&#x627;&#x648;&#x629; &#x627;&#x644;&#x625;&#x64A;&#x645;&#x627;&#x646;.md">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+  </svg></div>
+        <div class="nav-name">مفاتيح حلاوة الإيمان</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/index.html';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments">
+      <div class="nav-collapse " onclick="event.stopPropagation();document.querySelector('[data-path=&#x22;&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments&#x22;]').classList.toggle('expanded');">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+  </svg>
+      </div>
+        <div class="nav-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+    </svg></div>
+        <div class="nav-name">attachments</div>
+        </div>
+        
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x634;&#x62C;&#x631;&#x629; &#x62A;&#x62D;&#x645;&#x644; &#x627;&#x644;&#x634;&#x645;&#x633; &#x648;&#x627;&#x644;&#x642;&#x645;&#x631; 2.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x634;&#x62C;&#x631;&#x629; &#x62A;&#x62D;&#x645;&#x644; &#x627;&#x644;&#x634;&#x645;&#x633; &#x648;&#x627;&#x644;&#x642;&#x645;&#x631; 2.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x634;&#x62C;&#x631;&#x629; &#x62A;&#x62D;&#x645;&#x644; &#x627;&#x644;&#x634;&#x645;&#x633; &#x648;&#x627;&#x644;&#x642;&#x645;&#x631; 2.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">شجرة تحمل الشمس والقمر 2</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/sappling growing towards moon and sun (2).jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/sappling growing towards moon and sun (2).jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/sappling growing towards moon and sun (2).jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">sappling growing towards moon and sun (2)</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x634;&#x62C;&#x631;&#x629; &#x62A;&#x62D;&#x645;&#x644; &#x627;&#x644;&#x634;&#x645;&#x633; &#x648;&#x627;&#x644;&#x642;&#x645;&#x631; 3.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x634;&#x62C;&#x631;&#x629; &#x62A;&#x62D;&#x645;&#x644; &#x627;&#x644;&#x634;&#x645;&#x633; &#x648;&#x627;&#x644;&#x642;&#x645;&#x631; 3.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x634;&#x62C;&#x631;&#x629; &#x62A;&#x62D;&#x645;&#x644; &#x627;&#x644;&#x634;&#x645;&#x633; &#x648;&#x627;&#x644;&#x642;&#x645;&#x631; 3.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">شجرة تحمل الشمس والقمر 3</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; 1-2.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; 1-2.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; 1-2.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور 1-2</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 1 1.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 1 1.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 1 1.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر 1 1</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 1.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 1.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 1.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر 1</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 2.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 2.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 2.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر 2</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 3.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 3.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 3.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر 3</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 5.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 5.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 5.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر 5</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 6.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 6.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631; 6.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر 6</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631;.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631;.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x645;&#x639; &#x63A;&#x64A;&#x645; &#x648;&#x645;&#x637;&#x631;.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور مع غيم ومطر</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x646;&#x628;&#x62A;&#x629; &#x635;&#x63A;&#x64A;&#x631;&#x629;.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x646;&#x628;&#x62A;&#x629; &#x635;&#x63A;&#x64A;&#x631;&#x629;.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x646;&#x628;&#x62A;&#x629; &#x635;&#x63A;&#x64A;&#x631;&#x629;.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور نبتة صغيرة</div>
+        </div>
+        
+      </div>
+    
+      <div class="nav-item" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x646;&#x628;&#x62A;&#x629; &#x645;&#x62A;&#x648;&#x633;&#x637;&#x629;.jpg">
+      <div class="nav-contents " onclick="event.stopPropagation();window.location.href='./attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x646;&#x628;&#x62A;&#x629; &#x645;&#x62A;&#x648;&#x633;&#x637;&#x629;.jpg';" data-path="&#x645;&#x635;&#x646;&#x641;&#x627;&#x62A; &#x648;&#x643;&#x62A;&#x628;/attachments/&#x63A;&#x644;&#x627;&#x641; &#x631;&#x628;&#x64A;&#x639; &#x627;&#x644;&#x642;&#x644;&#x648;&#x628; &#x648;&#x646;&#x648;&#x631; &#x627;&#x644;&#x635;&#x62F;&#x648;&#x631; &#x646;&#x628;&#x62A;&#x629; &#x645;&#x62A;&#x648;&#x633;&#x637;&#x629;.jpg">
+      <div class='nav-spacer'></div>
+        <div class="nav-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="2.5" width="13" height="10" rx="1.5" stroke="currentColor"/>
+  <path d="M4.2 9.06667C4.6 8.53333 5.4 8.53333 5.8 9.06667L8 12H2L4.2 9.06667Z" fill="currentColor"/>
+  <path d="M9.16795 7.24808C9.56377 6.65434 10.4362 6.65434 10.8321 7.24808L14 12H6L9.16795 7.24808Z" fill="currentColor"/>
+  <circle cx="4.5" cy="5.5" r="1.5" fill="currentColor"/>
+  </svg>        
+  </div>
+        <div class="nav-name">غلاف ربيع القلوب ونور الصدور نبتة متوسطة</div>
+        </div>
+        
+      </div>
+    
+      </div>
+    
+      </div>
+    </div><div class="main"><div style="margin: 0 auto; width: 100%; margin-top: var(--file-margins); max-width: var(--file-line-width);  display: flex; position: relative; flex-direction: column; padding: 0 var(--file-margins); margin-bottom: var(--file-margins);"><div style="width: 48px; height: 48px; flex: 0 0 auto"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" font-family="Apple Color Emoji, Android Emoji, Segoe UI">
+      <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-size="114%">📚</text>
+    </svg>
+    </body></html></div><h1>مصنفات وكتب</h1><div style="display: flex; flex-direction: column;"><div style="width: 100%;"><table><thead><tr><th><div style="display: flex; align-items: center;"><div style="flex: 0 0 auto; width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M3.17897 12H2.25568L4.92613 4.72727H5.83522L8.50568 12H7.58238L5.40909 5.87784H5.35227L3.17897 12ZM3.51988 9.15909H7.24147V9.94034H3.51988V9.15909Z" fill="currentColor"></path>
+  <path d="M11.13 12.1278C10.7843 12.1278 10.4706 12.0627 10.1889 11.9325C9.90719 11.8 9.68347 11.6094 9.51775 11.3608C9.35203 11.1098 9.26917 10.8068 9.26917 10.4517C9.26917 10.1392 9.33072 9.88589 9.45383 9.69176C9.57694 9.49526 9.74147 9.34138 9.94744 9.23011C10.1534 9.11884 10.3807 9.03598 10.6293 8.98153C10.8802 8.92472 11.1323 8.87973 11.3856 8.84659C11.7171 8.80398 11.9858 8.77202 12.1918 8.75071C12.4001 8.72704 12.5516 8.68797 12.6463 8.63352C12.7434 8.57907 12.7919 8.48437 12.7919 8.34943V8.32102C12.7919 7.97064 12.696 7.69839 12.5043 7.50426C12.3149 7.31013 12.0272 7.21307 11.6413 7.21307C11.2412 7.21307 10.9276 7.30066 10.7003 7.47585C10.473 7.65104 10.3132 7.83807 10.2209 8.03693L9.42542 7.75284C9.56747 7.4214 9.75686 7.16335 9.9936 6.97869C10.2327 6.79167 10.4931 6.66146 10.7749 6.58807C11.0589 6.51231 11.3383 6.47443 11.6129 6.47443C11.7881 6.47443 11.9893 6.49574 12.2166 6.53835C12.4463 6.5786 12.6676 6.66264 12.8807 6.79048C13.0961 6.91832 13.2749 7.11127 13.4169 7.36932C13.5589 7.62737 13.63 7.97301 13.63 8.40625V12H12.7919V11.2614H12.7493C12.6925 11.3797 12.5978 11.5064 12.4652 11.6413C12.3326 11.7763 12.1562 11.8911 11.9361 11.9858C11.7159 12.0805 11.4472 12.1278 11.13 12.1278ZM11.2578 11.375C11.5892 11.375 11.8686 11.3099 12.0959 11.1797C12.3255 11.0495 12.4983 10.8814 12.6143 10.6754C12.7327 10.4695 12.7919 10.2528 12.7919 10.0256V9.25852C12.7564 9.30114 12.6783 9.3402 12.5575 9.37571C12.4392 9.40885 12.3018 9.43845 12.1456 9.46449C11.9917 9.48816 11.8414 9.50947 11.6946 9.52841C11.5502 9.54498 11.433 9.55918 11.343 9.57102C11.1252 9.59943 10.9216 9.6456 10.7322 9.70952C10.5452 9.77107 10.3937 9.86458 10.2777 9.99006C10.1641 10.1132 10.1072 10.2812 10.1072 10.4943C10.1072 10.7855 10.215 11.0057 10.4304 11.1548C10.6482 11.3016 10.924 11.375 11.2578 11.375Z" fill="currentColor"></path>
+  </svg>        
+  </body></html></div>File</div></th><th><div style="display: flex; align-items: center;"><div style="flex: 0 0 auto; width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-calendar-days"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg></body></html></div>Created</div></th><th><div style="display: flex; align-items: center;"><div style="flex: 0 0 auto; width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
+  </svg>
+  
+  </body></html></div>الحالة</div></th></tr></thead><tbody><tr><td><a href="./أنس المفضول.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">أنس المفضول</div></div></a></td><td>2024-12-27</td><td>مؤجل</td></tr><tr><td><a href="./الإحسان.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">الإحسان</div></div></a></td><td>2025-03-18</td><td>مؤجل</td></tr><tr><td><a href="./البيان في الاحتجاج بالسنة والقرآن.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">البيان في الاحتجاج بالسنة والقرآن</div></div></a></td><td>2024-05-30</td><td>قيد الكتابة</td></tr><tr><td><a href="./الدعاء والعرش.mdenc"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">الدعاء والعرش</div></div></a></td><td>2025-03-27</td><td>مؤجل</td></tr><tr><td><a href="./الحجة البالغة في القدر.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">الحجة البالغة في القدر</div></div></a></td><td>2025-02-22</td><td>مؤجل</td></tr><tr><td><a href="./الترجيحات في تصحيح الأحاديث.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">الترجيحات في تصحيح الأحاديث</div></div></a></td><td>2024-06-12</td><td>مراجعة</td></tr><tr><td><a href="./براهين النبوة.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">براهين النبوة</div></div></a></td><td>2025-02-23</td><td>قيد الكتابة</td></tr><tr><td><a href="./السراج المنير.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">السراج المنير</div></div></a></td><td>2025-04-10</td><td>قيد الكتابة</td></tr><tr><td><a href="./بيان فضل الله العظيم في إرسال المبعوث رحمة للعالمين.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">بيان فضل الله العظيم في إرسال المبعوث رحمة للعالمين</div></div></a></td><td>2024-08-04</td><td>مؤجل</td></tr><tr><td><a href="./تأسيس الصحابة لعلم الحديث.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">تأسيس الصحابة لعلم الحديث</div></div></a></td><td>2025-01-31</td><td>مراجعة</td></tr><tr><td><a href="./تحريم البدع.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">تحريم البدع</div></div></a></td><td>2025-05-22</td><td></td></tr><tr><td><a href="./تناظر أبي بكر وعمر.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">تناظر أبي بكر وعمر</div></div></a></td><td>2024-11-10</td><td></td></tr><tr><td><a href="./توقير الله وقبول الأعمال.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">توقير الله وقبول الأعمال</div></div></a></td><td>2025-04-09</td><td></td></tr><tr><td><a href="./ربيع القلوب ونور الصدور.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">ربيع القلوب ونور الصدور</div></div></a></td><td>2024-12-27</td><td></td></tr><tr><td><a href="./مسألة إتيان الله في صورة غير الذي يعرفون.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مسألة إتيان الله في صورة غير الذي يعرفون</div></div></a></td><td>2025-05-06</td><td></td></tr><tr><td><a href="./مفاتيح الرضا.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مفاتيح الرضا</div></div></a></td><td>2025-01-05</td><td></td></tr><tr><td><a href="./مفاتيح الصبر.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مفاتيح الصبر</div></div></a></td><td>2025-01-28</td><td></td></tr><tr><td><a href="./مفاتيح العلم والتعلم.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مفاتيح العلم والتعلم</div></div></a></td><td>2025-01-30</td><td></td></tr><tr><td><a href="./مفاتيح البركة.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مفاتيح البركة</div></div></a></td><td>2025-01-30</td><td></td></tr><tr><td><a href="./مفاتيح الفضل.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مفاتيح الفضل</div></div></a></td><td>2024-12-30</td><td></td></tr><tr><td><a href="./هل رأى النبي صلى الله عليه وسلم ربه.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">هل رأى النبي صلى الله عليه وسلم ربه</div></div></a></td><td>2025-05-06</td><td></td></tr><tr><td><a href="./هل نسيان شجرة الحديبية سد لذريعة الشرك؟.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">هل نسيان شجرة الحديبية سد لذريعة الشرك؟</div></div></a></td><td>2025-05-08</td><td></td></tr><tr><td><a href="./مفاتيح حلاوة الإيمان.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">مفاتيح حلاوة الإيمان</div></div></a></td><td>2024-12-27</td><td></td></tr><tr><td><a href="./attachments/index.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z"></path>
+    </svg></body></html></div><div style="margin-left: 8px;">attachments</div></div></a></td><td></td><td></td></tr><tr><td><a href="./index.html"><div style="display: flex; align-items: center;"><div style="width: 16px; height: 16px;"><html><head></head><body><svg style="width: 100%; height: 100%;" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"></path>
+  </svg></body></html></div><div style="margin-left: 8px;">index</div></div></a></td><td>2025-07-12</td><td></td></tr></tbody></table></div></div></div></div></div></body>
