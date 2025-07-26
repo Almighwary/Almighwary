@@ -1,0 +1,20 @@
+
+.dataview th, .dataview td {
+ text-align: center;
+direction: rtl;
+
+}
+
+.markdown-preview-view table {
+  /* Applies to all rendered markdown tables */
+direction:rtl; 
+   text-aign: center;
+}
+.markdown-preview-view th,
+.markdown-preview-view td {
+ text-aign: center;
+
+direction:rtl; 
+}
+
+
