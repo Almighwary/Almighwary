@@ -1,21 +1,10 @@
 ---
-{"dg-publish":true,"permalink":"/test/","noteIcon":"","created":"2025-07-29T14:54:45.707+03:00","updated":"2025-08-04T18:32:09.386+03:00"}
+{"dg-publish":true,"permalink":"/test/","noteIcon":"","created":"2025-07-29T14:54:45.707+03:00","updated":"2025-08-04T18:38:34.990+03:00"}
 ---
 
-<div style="width:210mm; height:297mm; margin: 0 auto; font-family: Arial, sans-serif; overflow: hidden; Position: absolute; top:0; left: 0; 
-    
-    background-size: cover; background-position: center; color: white; display: flex; justify-content: center; align-items: center; position: relative;"> 
-      <img src="../attachments/mountains with wind currents 3.png" alt="Image"
-      style="
-        position: relative;
-        top: 0;
-         left: 0;
-         width: 100vw;   /* A4 width */
-       height: 100vh;  /* A4 height */
-        object-fit: cover;
-    z-index: 0;
-      opacity:1;
-              "><div dir="rtl" style="border: 5px solid rgba(255, 179, 89, 0.7); border-radius: 7px; width: 90%; height: 90%;
+<div style="width:210mm; height:297mm; margin: 0 auto; font-family: Arial, sans-serif; overflow: hidden; 
+    background-image: url('https://images.unsplash.com/photo-1526566661780-1a67ea3c863e?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; background-position: center; color: white; display: flex; justify-content: center; align-items: center; position: relative;"> <div dir="rtl" style="border: 5px solid rgba(255, 179, 89, 0.7); border-radius: 7px; width: 90%; height: 90%;
       display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.7); z-index: 1; padding: 20px; box-sizing: border-box;"><!-- Title --><div style="font-size: clamp(2rem, 5vw, 4rem); font-weight: bold; color: red; text-shadow: 2px 0 15px black; -webkit-text-stroke: 0.5px white;">
       تكملة
@@ -34,3 +23,4 @@
     𝕏 Twitter <span style="color:#ff0000;">▶️</span> YouTube <span style="color:#00b0f0;">➣</span> Telegram
   </div>
 </div>
+
