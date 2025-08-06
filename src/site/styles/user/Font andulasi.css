@@ -19,10 +19,12 @@
 }
 
 /* === CODE BLOCKS USE ROBOTO MONO === */
-
+/* === CODE BLOCKS USE ROBOTO MONO === */
+.markdown-preview-view pre,
 .cm-inline-code,
 .cm-s-obsidian .cm-code {
   font-family: "Andalus", "Helvetica", "Inter",  "Roboto Mono", monospace;
 }
+
 
 
