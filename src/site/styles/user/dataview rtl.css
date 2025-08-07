@@ -1,0 +1,12 @@
+
+.dataview th, .dataview td { 
+text-align: center !important;
+}
+
+
+.table.dataview { 
+text-align: center !important;
+}
+.ul.list-view-ul { 
+text-align: center !important;
+}

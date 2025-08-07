@@ -13,20 +13,18 @@
 }
 
 /* === HEADERS USE HELVETICA === */
-.markdown-preview-view h1,
-.markdown-preview-view h2,
-.markdown-preview-view h3,
-.markdown-preview-view h4,
-.markdown-preview-view h5,
-.markdown-preview-view h6,
+
 .cm-header {
   font-family: "Andalus", "Helvetica", "Inter", "Arial", sans-serif;
 }
 
 /* === CODE BLOCKS USE ROBOTO MONO === */
+/* === CODE BLOCKS USE ROBOTO MONO === */
 .markdown-preview-view pre,
-.markdown-preview-view code,
 .cm-inline-code,
 .cm-s-obsidian .cm-code {
   font-family: "Andalus", "Helvetica", "Inter",  "Roboto Mono", monospace;
 }
+
+
+
