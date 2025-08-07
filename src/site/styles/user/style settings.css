@@ -5,10 +5,13 @@ mark {
 }
 
 strong {
-  color: #FF9E01;
+  color: #FF9E01!important;
   font-weight: bold;
 }
-
+.markdown-preview-view strong {
+  color: darkorange !important;
+   font-weight: bold;
+}
 
 em {
   color: darkred;
